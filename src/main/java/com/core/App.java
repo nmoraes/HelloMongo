@@ -34,13 +34,13 @@ public class App {
 			
 			/**** Insert ****/
 			// create a document to store key and value
-			/*BasicDBObject document = new BasicDBObject();
+			BasicDBObject document = new BasicDBObject();
 			document.put("name", "nicolas");
 			document.put("age", 30);
 			document.put("telefono", "093818108");
 			document.put("createdDate", new Date());
 			table.insert(document);
-			*/
+			
 			
 			/**** Find and display ****/
 			BasicDBObject searchQuery = new BasicDBObject();
@@ -65,13 +65,7 @@ public class App {
 		 
 			table.update(query, updateObj);
 			
-			
-			
-			
-			
-			
-			
-		
+				
 		} catch (UnknownHostException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
