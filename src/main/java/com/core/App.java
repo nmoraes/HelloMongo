@@ -10,7 +10,9 @@ import com.mongodb.DBCursor;
 import com.mongodb.MongoClient;
 
 /**
- * Hello world!
+ * Batch procces that connect with mongo DB
+ * 
+ * @author nico moraes
  *
  */
 public class App {
