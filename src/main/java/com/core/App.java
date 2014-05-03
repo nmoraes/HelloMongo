@@ -16,14 +16,6 @@ import com.mongodb.MongoClient;
 public class App {
 	
 	
-
-	//\
-	//private static String json = "({\"user_id\" : \"nicomoraes\",\"password\" :\"01234\" ,\"date_of_join\" : \"16/10/2010\" ,\"community_members\" : [500,200,1500],"friends_id" : ["MMM123","NNN123","OOO123"],"ban_friends_id" :["BAN123","BAN456","BAN789"]}); - See more at: http://www.w3resource.com/mongodb/mongodb-remove-collection.php#sthash.fd8g2VfX.dpuf"
-	
-	
-	
-	
-	
 	public static void main(String[] args) {
 		System.out.println("Mongo DB World!");
 		
@@ -42,12 +34,13 @@ public class App {
 			
 			/**** Insert ****/
 			// create a document to store key and value
-			BasicDBObject document = new BasicDBObject();
+			/*BasicDBObject document = new BasicDBObject();
 			document.put("name", "nicolas");
 			document.put("age", 30);
 			document.put("telefono", "093818108");
 			document.put("createdDate", new Date());
 			table.insert(document);
+			*/
 			
 			/**** Find and display ****/
 			BasicDBObject searchQuery = new BasicDBObject();
@@ -58,6 +51,25 @@ public class App {
 			while (cursor.hasNext()) {
 				System.out.println(cursor.next());
 			}
+			
+			/**** Update ****/
+			// search document where name="mkyong" and update it with new values
+			BasicDBObject query = new BasicDBObject();
+			query.put("name", "nicolas");
+		 
+			BasicDBObject newDocument = new BasicDBObject();
+			newDocument.put("name", "nico");
+		 
+			BasicDBObject updateObj = new BasicDBObject();
+			updateObj.put("$set", newDocument);
+		 
+			table.update(query, updateObj);
+			
+			
+			
+			
+			
+			
 			
 		
 		} catch (UnknownHostException e) {
