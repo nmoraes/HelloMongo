@@ -11,7 +11,7 @@ import com.mongodb.MongoClient;
 
 /**
  * Batch procces that connect with mongo DB
- * 
+ *  
  * @author nico moraes
  *
  */
@@ -28,7 +28,7 @@ public class App {
 			mongo = new MongoClient("localhost", 27017);
 			
 			DB db = mongo.getDB("nicoDB");
-			auth = db.authenticate("nicolas2", "12345".toCharArray());
+			auth = db.authenticate("nicolas513", "12345".toCharArray());
 		} catch (UnknownHostException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -61,7 +61,7 @@ public class App {
 			/**** Insert ****/
 			// create a document to store key and value
 			BasicDBObject document = new BasicDBObject();
-			document.put("_id", "nico.tef@gmail.com");
+			document.put("_id", "nico.tef2@gmail.com");
 			document.put("name", "nicolas");
 			document.put("age", 30);
 			document.put("telefono", "093818108");
