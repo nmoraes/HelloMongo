@@ -244,7 +244,7 @@ public class App {
 		
 	}
 }
-
+//./mongod --auth --logpath /Users/nicolas/mongodb/mongodb-osx-x86_64-2.6.0/server10.log
 //usuario administrador
 //> use admin
 //switched to db admin
@@ -269,6 +269,10 @@ public class App {
  > db.createUser({ user: "tefa",pwd: "kiko", readOnly = false,roles: [ { role: "readWrite", db: "nicoDB" }]})
  
  db.createUser({ user: "tefa",pwd: "kiko", readOnly = false,roles: [ { role: "readWrite", db: "nicoDB" }]})
+ 
+ 
+ db.coleccion_ipod.find({_id: "MLU417321758"}).pretty()
+ 
  *
  *
  **/
